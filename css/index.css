@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face{
+font-family:"Avenir LT W01 65 Medium";
+src:url("http://jaykapoor.in/css/Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot");
+src:url("http://jaykapoor.in/css/Fonts/212ab03d-5db2-4d6a-b94c-171cc702aa51.eot") format("eot"),url("Fonts/2cac77ec-9bc0-4ee7-87e4-27650190744f.woff") format("woff"),url("Fonts/aaf11848-aac2-4d09-9a9c-aac5ff7b8ff4.ttf") format("truetype"),url("Fonts/294099f3-8d00-4676-afc5-5e9d8d43ad69.svg") format("svg");
+}
+
+* { margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,0); box-sizing: border-box;}
+
+html{
+
+  position: fixed;
+  
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+
+  overflow: hidden;
+
+}
+
+body { 
+	
+	background-color:#11111a;
+
+  font: 15px/30px 'Space Mono', monospace;
+  letter-spacing: 1px;
+
+	color: #11111a;
+  height: 100%;
+	
+	-webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+
+  height: 100%;
+  max-height: 100%;
+
+ 
+}
+
+a {
+
+  text-decoration: none;
+  color: #11111a;
+
+}
+a:hover {
+
+  color: #66666a;
+}
+
+#headline-container{
+
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 50%;
+  margin-top: -120px;
+}
+
+h1{
+
+  font-size: 160px;
+  line-height: 200px;
+  color: #fff;
+  text-align: center;
+
+  letter-spacing: 20px;
+  margin-left: 20px;
+
+}
+
+#canvas-body {
+
+    position: relative;
+   max-width: 100%;
+   max-height: 100%;
+   width: 100%;
+   height: 100%;
+   margin-left: 0px;
+   margin-right: 0px;
+
+
+}
+
+#canvas-body.info{
+  background-color: #fff;
+}
+
+#menu-container{
+
+  position: absolute;
+  
+  top: 51px;
+  left: 51px;
+
+  width: 40px;
+  height: 40px;
+
+  -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+}
+
+.menu-icon{
+
+  width: 12px;
+  height: 12px;
+
+  margin-left: 14px;
+  margin-top: 14px;
+  
+  border-radius: 100%;
+  border: 2px solid #fff;
+
+  -webkit-transition: 0.3s;
+  transition: 0.3s; 
+
+}
+
+#menu-container:hover{
+
+  cursor: pointer;
+
+}
+
+#menu-container:hover .menu-icon{
+
+   background-color: #fff;
+
+}
+
+.menu-icon.info{
+  
+  border: 2px solid #11111a;
+
+}
+
+#menu-container:hover .menu-icon.info{
+
+   background-color: #11111a;
+
+}
+
+
+
+#gravity-container{
+
+  position: absolute;
+  
+  top: 51px;
+  right: 51px;
+  
+  width: 40px;
+  height: 40px;
+
+  z-index: 100;
+
+  -webkit-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  -moz-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  -o-transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+  transition: all 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+  -webkit-perspective: 1000;
+  -webkit-backface-visibility: hidden;
+
+  visibility: hidden;
+  opacity: 0;
+
+  z-index: 300;
+
+}
+
+.gravity-icon{
+
+  width: 2px;
+  height: 16px;
+
+  margin-left: 19px;
+  margin-top: 12px;
+  
+  background-color: #fff;
+
+}
+
+.gravity-icon.info{
+
+  background-color: #11111a;
+
+}
+
+#gravity-container.show{
+
+  visibility: visible;
+  opacity: 1;
+
+}
+
+#gravity-container:hover{
+
+  cursor: pointer;
+
+}
+
+#info-container{
+
+  position: absolute;
+  display: block;
+
+  top: 0;
+  left: 0%;
+  
+  width: 100%;
+  height: 100%;
+
+  display: none;
+  
+}
+
+#info-container.info{
+  display: block;
+}
+
+.info-text-container{
+
+  position: absolute;
+  display: block;
+
+  top: 50%;
+  left: 50%;
+
+  margin-top: -180px;
+  margin-left: -300px;
+  
+  width: 600px;
+  height: 360px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  cursor: default;
+
+}
+
+
+.icon{
+
+   position: fixed; width: 10px; height: 10px; top: -100px;
+
+}
+
+#vimeo_rollover{
+
+  position: absolute;
+  top: 60px;
+  left: 460px;
+  z-index: 20000;
+
+  display: none;
+}
+
+
+@media screen and (max-width: 1359px) {
+
+  body{
+    
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+  body{
+    
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+
+
+    #menu-container{
+
+    position: absolute;
+  
+      top: 32px;
+      left: 32px;
+
+
+    }
+
+    #gravity-container{
+
+      position: absolute;
+      
+      top: 32px;
+      right: 32px;
+
+    }
+
+
+    .text-spaces{
+  display: none;
+}
+
+.info-text-container{
+  
+  left: 0px;
+  
+  height: 312px;
+  margin-top: -104px;
+
+  margin-left: 0px;
+
+  padding-left: 45px;
+  
+  width: 100%;
+
+  font-size: 12px;
+  line-height: 26px;
+  text-align: left;
+
+  
+}
+
+
+       
+}
+
+
+
+
+#typewriter {
+color: #fff;
+text-align: center;
+/* margin-top: 200px; */
+font-size: 42px;
+position: absolute;
+top: 40%;
+width:100%;
+}
